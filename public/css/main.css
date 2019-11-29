@@ -3,7 +3,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nova+Mono);
 
 
-/* zocial */
 [class*="entypo-"]:before {
     font-family: 'entypo', sans-serif;
 }
@@ -20,31 +19,26 @@ body {
     background: #bdc3c7;
 }
 
-
-
 h1, a {
     text-decoration: none;
-    color:#7f8c8d;
+    color: #7f8c8d;
     font-family: 'Bad Script', cursive;
-    margin-bottom:0px;
-
+    margin-bottom: 0;
 }
 
 .content {
     width: 400px;
     margin: 0 auto;
     background: #ecf0f1;
-    border-top:5px solid #7f8c8d;
-    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, .5);
+    border-top: 5px solid #7f8c8d;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, .5);
     font-family: 'Nova Mono', cursive;
     font-size: 18px;
-
 }
 
 .header {
     padding:20px;
     background: #ececec;
-
 }
 
 .todoItem {
@@ -55,16 +49,20 @@ h1, a {
     transition:all 1s;
 }
 
+.todoItem a {
+    font-size: 16px;
+}
+
 .done {
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
 
 input {
     background: transparent;
-    border:none;
-    font-size:20px;
+    border: none;
+    font-size: 20px;
     font-family: 'Nova Mono', cursive;
-    color:#95a5a6;
+    color: #95a5a6;
     width: 300px;
 }
 
@@ -78,8 +76,8 @@ span:focus {
 
 button {
     background: transparent;
-    border:none;
-    color:#7f8c8d;
+    border: none;
+    color: #7f8c8d;
     cursor: pointer;
 }
 
@@ -88,11 +86,11 @@ button {
     background: rgba(0,0,0,0);
     border: 0;
     float: right;
-    display:inline-block;
-    color:transparent;
-    transition:all .5s;
+    display: inline-block;
+    color: transparent;
+    transition: all .5s;
 }
 
 .todoItem:hover button {
-    color:#7f8c8d;
+    color: #7f8c8d;
 }
