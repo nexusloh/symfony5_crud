@@ -6,39 +6,23 @@
 <div>
     <div class="content">
         <div class="header">
-            <form action="">
+            <form method="post" action="{{ path('create_task') }}">
                 <button type="submit">
                     <span class="entypo-list-add"></span>
                 </button>
-                <input type="text" placeholder="Add todo here!"/>
+                <label>
+                    <input name="title" type="text" placeholder="Add todo here!"/>
+                </label>
             </form>
         </div>
 
         <div class="todoItem">
             <span contenteditable="true">sss</span>
             <button>
-                <span>o</span>
+                <a href="{{ path('switch_status',{'id':1}) }}"><span>o</span></a>
             </button>
             <button>
-                <span>x</span>
-            </button>
-        </div>
-        <div class="todoItem">
-            <span contenteditable="true">sss</span>
-            <button>
-                <span>o</span>
-            </button>
-            <button>
-                <span>x</span>
-            </button>
-        </div>
-        <div class="todoItem">
-            <span contenteditable="true">sss</span>
-            <button>
-                <span>o</span>
-            </button>
-            <button>
-                <span>x</span>
+                <a href="{{ path('delete_task',{'id':1}) }}"><span>x</span></a>
             </button>
         </div>
     </div>

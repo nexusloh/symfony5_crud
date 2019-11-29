@@ -20,7 +20,10 @@ body {
     background: #bdc3c7;
 }
 
-h1 {
+
+
+h1, a {
+    text-decoration: none;
     color:#7f8c8d;
     font-family: 'Bad Script', cursive;
     margin-bottom:0px;
