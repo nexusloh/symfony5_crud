@@ -14,7 +14,8 @@ class ToDoListController extends AbstractController
      */
     public function index()
     {
-        return $this->render('index.html.twig');
+        $tasks = $this->getDoctrine()->getRepository(Task::class)->findby([], ['id' => 'DESC']);
+        return $this->render('index.html.twig', ['tasks' => $tasks]);
     }
 
     /**
@@ -38,5 +39,24 @@ class ToDoListController extends AbstractController
         $entityManager->flush();
 
         return $this->redirectToRoute('to_do_list');
+    }
+
+
+    /**
+     * @Route("/switch-status/{id}", name="switch_status")
+     * @param $id
+     */
+    public function switchStatus($id)
+    {
+        exit('switch'.$id);
+    }
+
+    /**
+     * @Route("/delete/{id}", name="delete_task")
+     * @param $id
+     */
+    public function delete($id)
+    {
+        exit('delete'.$id);
     }
 }

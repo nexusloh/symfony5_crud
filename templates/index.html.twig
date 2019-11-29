@@ -16,15 +16,17 @@
             </form>
         </div>
 
-        <div class="todoItem">
-            <span contenteditable="true">sss</span>
+        {% for task in tasks %}
+        <div class="todoItem {% if task.status %} done {% endif %}">
+            <span>{{ task.title }}</span>
             <button>
-                <a href="{{ path('switch_status',{'id':1}) }}"><span>o</span></a>
+                <a href="{{ path('switch_status',{'id':task.id}) }}"><span>o</span></a>
             </button>
             <button>
-                <a href="{{ path('delete_task',{'id':1}) }}"><span>x</span></a>
+                <a href="{{ path('delete_task',{'id':task.id}) }}"><span>x</span></a>
             </button>
         </div>
+        {% endfor %}
     </div>
 </div>
 
