@@ -46,7 +46,6 @@ h1, a {
     border-top:2px solid rgb(200,200,200);
     border-top-style:dashed;
     color:#7f8c8d;
-    transition:all 1s;
 }
 
 .todoItem a {
