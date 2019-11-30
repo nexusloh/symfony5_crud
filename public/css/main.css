@@ -1,0 +1,103 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+@import url(https://fonts.googleapis.com/css?family=Nova+Mono);
+
+
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #bdc3c7;
+}
+
+h1, a {
+    text-decoration: none;
+    color: #7f8c8d;
+    font-family: 'Bad Script', cursive;
+    margin-bottom: 0;
+}
+
+.content-wrapper {
+    padding: 10px;
+}
+
+.content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ecf0f1;
+    border-top: 5px solid #7f8c8d;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, .5);
+    font-family: 'Nova Mono', cursive;
+    font-size: 18px;
+}
+
+.header {
+    padding:20px;
+    background: #ececec;
+}
+
+.todoItem {
+    padding: 20px;
+    border-top:2px solid rgb(200,200,200);
+    border-top-style:dashed;
+    color:#7f8c8d;
+}
+
+.todoItem a {
+    font-size: 16px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-family: 'Nova Mono', cursive;
+    color: #95a5a6;
+}
+
+input:focus {
+    outline-color: transparent;
+}
+
+span:focus {
+    outline-color: transparent;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: #7f8c8d;
+    cursor: pointer;
+}
+
+.todoItem button {
+    position: relative;
+    background: rgba(0,0,0,0);
+    border: 0;
+    float: right;
+    display: inline-block;
+    color: transparent;
+    transition: all .5s;
+}
+
+.todoItem:hover button {
+    color: #7f8c8d;
+}

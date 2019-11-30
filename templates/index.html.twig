@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<h1>Todo List</h1>
+<div class="content-wrapper">
+    <div class="content">
+        <div class="header">
+            <form method="post" action="{{ path('create_task') }}">
+                <button type="submit">
+                    <span class="entypo-list-add"></span>
+                </button>
+                <label>
+                    <input name="title" type="text" placeholder="Add todo here!"/>
+                </label>
+            </form>
+        </div>
+
+        {% for task in tasks %}
+        <div class="todoItem {% if task.status %} done {% endif %}">
+            <span>{{ task.title }}</span>
+            <button>
+                <a href="{{ path('switch_status',{'id':task.id}) }}"><span>o</span></a>
+            </button>
+            <button>
+                <a href="{{ path('delete_task',{'id':task.id}) }}"><span>x</span></a>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
